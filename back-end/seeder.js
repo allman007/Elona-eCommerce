@@ -1,10 +1,10 @@
-import mongose from "mongoose";
+import mongoose from "mongoose";
 import dotenv from "dotenv";
 import users from "./data/users.js";
 import products from "./data/products.js";
 import User from "./models/userModel.js";
-import Product from "./models/orderModel.js";
-import Order from "./models/productModel.js";
+import Order from "./models/orderModel.js";
+import Product from "./models/productModel.js";
 import connectDB from "./config/db.js";
 
 dotenv.config();
@@ -17,11 +17,11 @@ const importData = async () => {
     await Product.deleteMany();
     await User.deleteMany();
 
-    const createdUser = await User.insertMany(users);
+    const createdUsers = await User.insertMany(users);
 
-    const adminUser = createdUser[0]._id;
-    const sampleProducts = products.map((products) => {
-      return { ...products, user: adminUser };
+    const adminUser = createdUsers[0]._id;
+    const sampleProducts = products.map((product) => {
+      return { ...product, user: adminUser };
     });
 
     await Product.insertMany(sampleProducts);

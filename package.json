@@ -9,8 +9,8 @@
     "server": "nodemon back-end/server",
     "client": "npm start --prefix front-end",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "data:import": "node backend/seeder",
-    "data:destory": "node backend/seeder -d"
+    "data:import": "node back-end/seeder",
+    "data:destory": "node back-end/seeder -d"
   },
   "keywords": [],
   "author": "Nwanji Uche",
