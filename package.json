@@ -1,0 +1,24 @@
+{
+  "name": "ELONA-main",
+  "version": "1.0.0",
+  "description": "Ecommerce App",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node back-end/server",
+    "server": "nodemon back-end/server",
+    "client": "npm start --prefix front-end",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "Nwanji Uche",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.13"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
