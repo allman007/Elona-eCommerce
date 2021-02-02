@@ -8,12 +8,15 @@
     "start": "node back-end/server",
     "server": "nodemon back-end/server",
     "client": "npm start --prefix front-end",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destory": "node backend/seeder -d"
   },
   "keywords": [],
   "author": "Nwanji Uche",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.11.13"
